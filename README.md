@@ -32,6 +32,7 @@ The library outputs a unified JSON structure that includes:
 
 ## Project Structure
 
+```
 athlete-data-processor/ 
 ├── src/ 
 │ ├── models/ 
@@ -53,7 +54,7 @@ athlete-data-processor/
 ├── tsconfig.json 
 ├── jest.config.js 
 └── README.md
-
+```
 
 ## Installation
 
