@@ -1,4 +1,4 @@
-interface ActivitySummary {
+export interface ActivitySummary {
     userId: string;
     activityId: number;
     activityName: string;
@@ -11,3 +11,4 @@ interface ActivitySummary {
     deviceName: string;
     maxHeartRateInBeatsPerMinute: number;
   }
+  

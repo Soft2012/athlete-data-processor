@@ -1,4 +1,4 @@
-interface Lap {
+export interface Lap {
     startTimeInSeconds: number;
     airTemperatureCelsius: number;
     heartRate: number;

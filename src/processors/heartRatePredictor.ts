@@ -2,6 +2,17 @@ export class HeartRatePredictor {
     private model: any;
   
     constructor(private heartRateData: number[]) {}
+
+    private calculateMedian(data: number[]): number {
+        const sorted = data.slice().sort((a, b) => a - b);
+        const mid = Math.floor(sorted.length / 2);
+      
+        if (sorted.length % 2 === 0) {
+          return (sorted[mid - 1] + sorted[mid]) / 2;
+        } else {
+          return sorted[mid];
+        }
+      }
   
     trainModel() {
       // Implement a simple linear regression model or use external libraries
@@ -10,7 +21,7 @@ export class HeartRatePredictor {
   
     predictNextMedian() {
       // Predict the next median heart rate based on the model
-      return Math.median(this.heartRateData.slice(-5));
+      return this.calculateMedian(this.heartRateData.slice(-5));
     }
   
     evaluateModel(testData: number[]) {
