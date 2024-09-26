@@ -67,7 +67,7 @@ athlete-data-processor/
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/athlete-data-processor.git
+    git clone https://github.com/Soft2012/athlete-data-processor
     cd athlete-data-processor
     ```
 
