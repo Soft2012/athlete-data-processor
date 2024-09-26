@@ -1,13 +1,16 @@
 {
     "compilerOptions": {
-      "target": "ES2017",
-      "module": "commonjs",
-      "rootDir": "./src",
-      "outDir": "./dist",
-      "strict": true,
-      "esModuleInterop": true
+        "target": "ES6",
+        "module": "commonjs",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "outDir": "./dist",
+        "rootDir": "./",  // Change this to the root directory
+        "types": ["jest", "node"] // Ensure Jest types are included
     },
-    "include": ["src"],
-    "exclude": ["node_modules", "tests"]
-  }
+    "include": ["src/**/*.ts", "tests/**/*.ts"],
+    "exclude": ["node_modules", "dist"]
+}
   

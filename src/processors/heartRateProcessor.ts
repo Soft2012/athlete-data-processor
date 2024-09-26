@@ -7,16 +7,16 @@ export class HeartRateProcessor {
       return cleanedData;
     }
   
-    reverseAggregation() {
-      // Reverse the aggregation of heart rate data (assuming input is aggregated every 5 ticks)
-      let interpolatedData: number[] = [];
-      for (let i = 0; i < this.heartRateData.length - 1; i++) {
-        const diff = (this.heartRateData[i + 1] - this.heartRateData[i]) / 4;
-        for (let j = 0; j < 5; j++) {
-          interpolatedData.push(this.heartRateData[i] + j * diff);
+    public reverseAggregation(): number[] {
+        // Assuming you have a recording rate of 5
+        const result: number[] = [];
+        for (let i = 0; i < this.heartRateData.length; i++) {
+            for (let j = 0; j < 5; j++) {
+            result.push(this.heartRateData[i]); // Modify logic based on your requirements
+            }
         }
-      }
-      return interpolatedData;
+        return result;
     }
+
   }
   
